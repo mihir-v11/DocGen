@@ -11,7 +11,9 @@ def extract_text_from_word(docx_file,doc=""):
     """
     Extracts text from a Word document without any additional cleaning or processing.
     """
-    try:
+    print(f"Extracting text from: {docx_file}")
+    # try:
+    if True:
         if doc=="":
             doc = Document(docx_file)
             
@@ -44,9 +46,9 @@ def extract_text_from_word(docx_file,doc=""):
 
         return result.strip()
 
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-        return None
+    # except Exception as e:
+    #     print(f"An unexpected error occurred: {e}")
+    #     return None
 
 def key_stucture(json_text):
     merged_data = {}
