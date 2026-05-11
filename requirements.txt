@@ -19,6 +19,7 @@ tiktoken
 pdf2image
 opencv-python-headless
 pdfplumber
+extract-msg
 selenium
 webdriver-manager
 undetected-chromedriver
