@@ -19,5 +19,6 @@ opencv-python-headless
 pdfplumber
 selenium
 webdriver-manager
+undetected-chromedriver
 beautifulsoup4
 fake-useragent
