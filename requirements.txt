@@ -7,6 +7,7 @@ langchain-openai
 langchain-text-splitters
 python-dotenv
 python-docx
+pythoncom
 docxcompose
 pandas
 numpy
