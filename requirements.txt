@@ -19,3 +19,4 @@ opencv-python-headless
 pdfplumber
 selenium
 webdriver-manager
+beautifulsoup4
