@@ -10,3 +10,4 @@ PyPDF2
 requests
 langchain
 langchain-openai
+langchain-text-splitters
