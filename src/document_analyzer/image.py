@@ -17,12 +17,7 @@ import streamlit as st
 
   # Assuming this is for another purpose not shown in the code
 
-# Load the configuration file
-with open('Config/configuration.json', 'r') as f:
-    config = json.load(f)
 
-# Set the OpenAI API key
-openai.api_key = config['api_key']
 
 logging.basicConfig(level=logging.INFO,filename='logs/app.log',filemode='a',format='%(asctime)s - %(levelname)s - %(message)s')
 
