@@ -257,7 +257,11 @@ if st.session_state.selected_feature == 'Technical':
 
     # template_doc= r"templates\DMR_Template_21-5-2025.docx"
     # template_doc=r"templates\template_1 - Copy.docx"
-    template_doc=r"templates\DMR_Template_18_12_2025.docx"
+    from pathlib import Path
+
+    BASE_DIR = Path(__file__).resolve().parents[2]
+    template_doc = BASE_DIR / "template" / "DMR_Template_18_12_2025.docx"
+    # template_doc=r"templates\DMR_Template_18_12_2025.docx"
         
     token_info=[] 
     input_tokens = 0
