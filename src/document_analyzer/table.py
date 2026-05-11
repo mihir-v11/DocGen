@@ -10,8 +10,7 @@ import tiktoken
 
 
 
-with open('Config/configuration.json', 'r') as f:
-    config = json.load(f)
+
 
 
 logging.basicConfig(
