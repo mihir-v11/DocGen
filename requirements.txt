@@ -20,3 +20,4 @@ pdfplumber
 selenium
 webdriver-manager
 beautifulsoup4
+fake-useragent
