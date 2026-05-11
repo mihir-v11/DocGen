@@ -2,8 +2,7 @@ import os
 import re
 from fuzzywuzzy import process
 import streamlit as st
-import win32com.client as win32
-import pythoncom
+
 
 
 
@@ -145,17 +144,7 @@ def map_folders_from_device_description_data_paths(available_folders, base_folde
             if folder_normalized.endswith(".doc"):
                 sop_file_path_abs = os.path.abspath(sop_file_path).replace("/", "\\")
 
-                pythoncom.CoInitialize()
-                try:
-                    word = win32.gencache.EnsureDispatch('Word.Application')
-                    doc = word.Documents.Open(sop_file_path_abs)
-                    
-                    output_path = sop_file_path_abs.replace('.doc', 'abc.docx')
-                    doc.SaveAs(output_path, FileFormat=16)
-                    doc.Close()
-                    word.Quit()
-                finally:
-                    pythoncom.CoUninitialize()
+               
                 sop_file_path = sop_file_path.replace('.doc', '.docx')
             output_path = sop_file_path.replace("\\" , "/")
 
