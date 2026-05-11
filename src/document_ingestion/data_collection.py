@@ -2,7 +2,6 @@ import os
 import json
 import mimetypes
 import extract_msg
-import pythoncom
 import openpyxl
 import fitz  # PyMuPDF
 from win32com.client import Dispatch
@@ -173,28 +172,7 @@ def data_extraction(input_files_path):
 
 
 
-def convert_doc_to_docx(sop_file_path):
-    """
-    Convert a .doc file to .docx format using win32com.
-    """
-    if sop_file_path.lower().endswith('.doc'):
-        # Check if the file exists
-        if os.path.exists(sop_file_path):
-            # Convert to .docx
-            sop_file_path_abs = os.path.abspath(sop_file_path).replace("/", "\\")
-            pythoncom.CoInitialize()
-            try:
-                word = win32.gencache.EnsureDispatch('Word.Application')
-                doc = word.Documents.Open(sop_file_path_abs)
-                
-                output_path = sop_file_path_abs.replace('.doc', '_new.docx')
-                doc.SaveAs(output_path, FileFormat=16)
-                doc.Close()
-                word.Quit()
-            except:
-                pass
-            finally:
-                pythoncom.CoUninitialize()
+
 
 def convert_all_doc_to_docx_in_folder(folder_path):
     """
