@@ -2,11 +2,10 @@ import os
 from PyPDF2 import PdfMerger
 from fpdf import FPDF
 from fuzzywuzzy import process
-import comtypes.client  # For Word to PDF conversion (Windows only)
 import tempfile
 import shutil
 from docx2pdf import convert
-import pythoncom
+
 
 
 appendices={
