@@ -17,7 +17,6 @@ from openai import AzureOpenAI
 from src.document_generate.dynamic_template import handle_user_message
 from src.document_ingestion.data_collection import data_extraction
 from src.document_analyzer.json_converter import extract_text_from_word
-from src.document_generate.Assembling_appendix import assemble_appendices,convert_word_to_pdf
 from src.document_analyzer.contents import refresh_toc_with_word,extract_headings_with_tables
 from src.document_ingestion.paths import map_categories_to_json,map_categories_to_json_Executive_Summary,maping_folder
 
