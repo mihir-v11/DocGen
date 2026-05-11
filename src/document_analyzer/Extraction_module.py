@@ -17,7 +17,7 @@ from openai import AzureOpenAI
 from src.document_generate.dynamic_template import handle_user_message
 from src.document_ingestion.data_collection import data_extraction
 from src.document_analyzer.json_converter import extract_text_from_word
-from src.document_analyzer.contents import refresh_toc_with_word,extract_headings_with_tables
+
 from src.document_ingestion.paths import map_categories_to_json,map_categories_to_json_Executive_Summary,maping_folder
 
 # Function to split the template text into two parts based on the section header
@@ -290,35 +290,12 @@ def extraction(template_file_path):
     composer.save(new_file_path_temp)
 
 
-    doc_t=extract_headings_with_tables(new_file_path_temp, 0, final_document_doc)
-
-    file_path_abs = os.path.abspath(final_document_doc)
-    # st.write(file_path_abs)
     
-    
-    refresh_toc_with_word(file_path_abs)
 
-    # doc123 = Document(final_document_doc)
-    
-    # doc_final = Document(template_path_1)
-
-    # composer1 = Composer(doc_final)
-    # composer1.append(doc0)
-    # composer1.append(doc123)
-    # composer1.save(new_file_path_temp)
-
-
-
+    file_path_abs = os.path.abspath(new_file_path_temp)
    
 
 
-
-    
-
-    # for element in doc.element.body:
-    #     doc1.element.body.append(element)
-    
-    # doc1.save(new_file_path)
 
     link_doc = Document(file_path_abs)
     output = io.BytesIO()
@@ -351,11 +328,6 @@ def extraction(template_file_path):
 
 
 
-    # # final_document="Regulatory_Document_DMF_Output.pdf"
-    # # new_file_name_pdf="Regulatory_Document_DMF_Output.pdf"
-
-
-    # return final_document,new_file_name_pdf
 
     
 
