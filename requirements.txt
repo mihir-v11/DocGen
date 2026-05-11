@@ -1,3 +1,5 @@
+setuptools
+undetected-chromedriver
 streamlit
 openai
 langchain
