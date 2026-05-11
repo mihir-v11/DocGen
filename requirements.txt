@@ -24,3 +24,4 @@ fake-useragent
 undetected-chromedriver
 setuptools
 extract-msg
+openpyxl
