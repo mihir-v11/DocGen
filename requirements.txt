@@ -2,6 +2,7 @@ streamlit
 openai
 langchain
 langchain-openai
+langchain-text-splitters
 python-dotenv
 python-docx
 docxcompose
