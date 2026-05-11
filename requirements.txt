@@ -15,6 +15,4 @@ PyMuPDF
 tiktoken
 pdf2image
 opencv-python-headless
-langchain-core
-langchain-text-splitters
-langchain-community
+pdfplumber
