@@ -18,6 +18,8 @@ def maping_folder():
     """Map folder names to their corresponding data paths."""
     base_folder = fr"data/artifacts/Extracted_folder"
     folders = [f for f in os.listdir(base_folder) if os.path.isdir(os.path.join(base_folder, f))]
+    print("_______________________________________________________")
+    print(folders)
     if len(folders)>1:
         base_folder = rf"data/artifacts/Extracted_folder"
     else:
