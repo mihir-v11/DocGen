@@ -1,0 +1,5 @@
+STP ULT.zip
+__pycache__/
+*.pyc
+.env
+config/configuration.json
