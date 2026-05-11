@@ -11,3 +11,4 @@ requests
 langchain
 langchain-openai
 langchain-text-splitters
+pytesseract
