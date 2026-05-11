@@ -16,7 +16,6 @@ from src.document_analyzer.table import derived_table, derived_static_table
 from src.document_analyzer.image import extract_images_with_fallback, image_selection_1
 from src.document_generate.doc_generate import save_text_in_document_1
 import os
-from src.scraping.scrap_2 import scrapping
 import streamlit as st
 from copy import deepcopy
 from docxcompose.composer import Composer
