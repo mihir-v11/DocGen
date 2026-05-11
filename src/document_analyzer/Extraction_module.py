@@ -9,9 +9,10 @@ from docx import Document
 from datetime import datetime
 from docxcompose.composer import Composer
 from dotenv import load_dotenv
-from langchain.chat_models import AzureChatOpenAI
-from openai import AzureOpenAI
-from langchain.schema import SystemMessage, HumanMessage
+
+from langchain_openai import AzureChatOpenAI
+from openai import AzureOpenAI  
+
 
 from src.document_generate.dynamic_template import handle_user_message
 from src.document_ingestion.data_collection import data_extraction

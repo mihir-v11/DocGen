@@ -1,6 +1,8 @@
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_openai import AzureChatOpenAI
 import openai
 import json
 import pytesseract
@@ -9,23 +11,17 @@ import pandas as pd
 import time
 from io import StringIO
 import numpy as np
-from src.document_analyzer.text import  image_based_warning, extract_images_and_figures_page_number,process_warning_text_with_GPT,process_text_with_GPT,encode_image,extract_images_from_docx,image_based_manufecturing
-from src.document_analyzer.table import derived_table,derived_static_table
-from src.document_analyzer.image import extract_images_with_fallback,image_selection_1
+from src.document_analyzer.text import image_based_warning, extract_images_and_figures_page_number, process_warning_text_with_GPT, process_text_with_GPT, encode_image, extract_images_from_docx, image_based_manufecturing
+from src.document_analyzer.table import derived_table, derived_static_table
+from src.document_analyzer.image import extract_images_with_fallback, image_selection_1
 from src.document_generate.doc_generate import save_text_in_document_1
 import os
 from src.scraping.scrap_2 import scrapping
 import streamlit as st
-import copy
 from copy import deepcopy
 from docxcompose.composer import Composer
 from docx import Document
-
 from dotenv import load_dotenv
-from langchain.chat_models import AzureChatOpenAI
-from langchain.schema import SystemMessage, HumanMessage
-
-from src.document_generate.doc_generate import save_text_in_document_1
 
 pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
 input_tokens=0,

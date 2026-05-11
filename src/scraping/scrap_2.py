@@ -14,7 +14,7 @@ import logging
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from fake_useragent import UserAgent
-import undetected_chromedriver as uc  # For better detection avoidance
+import undetected_chromedriver as uc
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from docx import Document
@@ -25,13 +25,15 @@ import fitz
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment
 from openpyxl.utils.dataframe import dataframe_to_rows
-from langchain.chat_models import ChatOpenAI
-from langchain.prompts import PromptTemplate
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import PromptTemplate
 import numpy as np
 import random
 from src.scraping.scrap_wrapper_2 import web_scrapping_all
 import gc
 import os
+
+
 
 # Load the configuration file
 with open(r'Config\configuration.json', 'r') as f:

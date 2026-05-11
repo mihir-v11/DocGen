@@ -1,22 +1,14 @@
 import openai
 import json
-from datetime import datetime
-import logging
 import logging
 from datetime import datetime
-from langchain_community.chat_models import ChatOpenAI
-from langchain.prompts import PromptTemplate
-from langchain.chat_models import AzureChatOpenAI
-
-
-from langchain.schema import SystemMessage, HumanMessage
-from langchain_core.output_parsers import JsonOutputParser
-import json
-
-
-
+from langchain_openai import ChatOpenAI, AzureChatOpenAI
+from langchain_core.prompts import PromptTemplate
+from langchain_core.messages import SystemMessage, HumanMessage
 from langchain_core.output_parsers import JsonOutputParser
 import tiktoken
+
+
 
 with open('Config/configuration.json', 'r') as f:
     config = json.load(f)

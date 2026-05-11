@@ -4,12 +4,10 @@ import openai
 import time
 import logging
 import json
-from docx import Document 
+from docx import Document
 from pdf2image import convert_from_bytes
 from pdf2image import convert_from_path
 import stat
-from docx import Document
-# from IPython.display import Image, display
 import base64
 import shutil
 import cv2
@@ -18,13 +16,11 @@ from PyPDF2 import PdfReader, PdfWriter
 from PIL import Image
 import pytesseract
 import zipfile
-from langchain_community.chat_models import ChatOpenAI
-from langchain.prompts import PromptTemplate
 import streamlit as st
 import os
 from dotenv import load_dotenv
-from langchain.chat_models import AzureChatOpenAI
-from langchain.schema import SystemMessage, HumanMessage
+from langchain_core.prompts import PromptTemplate
+from langchain_core.messages import SystemMessage, HumanMessage
 
 
 pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
