@@ -4,12 +4,11 @@ import mimetypes
 import extract_msg
 import openpyxl
 import fitz  # PyMuPDF
-from win32com.client import Dispatch
 from docx import Document
 import pdfplumber
 import streamlit as st
 import re
-import win32com.client as win32
+
 
 def process_msg_files(msg_file_path):
     """Extracts data from a .msg file."""
@@ -174,17 +173,4 @@ def data_extraction(input_files_path):
 
 
 
-def convert_all_doc_to_docx_in_folder(folder_path):
-    """
-    Recursively converts all .doc files (excluding .docx) in a folder and its subfolders to .docx format.
-    """
-    for root, _, files in os.walk(folder_path):
-        for filename in files:
-           
-            if filename.lower().endswith(".doc") and not filename.lower().endswith(".docx"):
-                doc_path = os.path.join(root, filename)
-                print(f"Converting: {doc_path}")
-                try:
-                    convert_doc_to_docx(doc_path)
-                except Exception as e:
-                    print(f"Failed to convert {doc_path}: {e}")
+
