@@ -13,3 +13,4 @@ requests
 pytesseract
 PyMuPDF
 tiktoken
+pdf2image
