@@ -8,3 +8,5 @@ numpy
 pillow
 PyPDF2
 requests
+langchain
+langchain-openai
