@@ -23,6 +23,7 @@ webdriver-manager
 beautifulsoup4
 fake-useragent
 undetected-chromedriver
+fuzzywuzzy
 setuptools
 extract-msg
 openpyxl
