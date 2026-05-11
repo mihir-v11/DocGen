@@ -16,3 +16,4 @@ tiktoken
 pdf2image
 opencv-python-headless
 pdfplumber
+selenium
