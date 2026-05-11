@@ -26,9 +26,7 @@ from langchain_core.messages import SystemMessage, HumanMessage
 pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
 
 
-# Load the config file
-with open('Config/configuration.json', 'r') as f:
-    config = json.load(f)
+
 
 
 
