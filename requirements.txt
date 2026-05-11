@@ -14,3 +14,4 @@ pytesseract
 PyMuPDF
 tiktoken
 pdf2image
+opencv-python-headless
